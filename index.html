@@ -5,10 +5,12 @@
     html {
         height: 100%;
         margin: 0;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
     }
-    
+
     .bgimg {
-        background-image: url('dev_background.png');
+        background-image: url("dev_background.png");
         height: 100%;
         background-position: center;
         background-size: cover;
@@ -17,26 +19,27 @@
         font-family: "Courier New", Courier, monospace;
         font-size: 25px;
     }
-    
+
     .topleft {
         position: absolute;
         top: 0;
         left: 16px;
         color: black;
+        font-size: xxx-large;
     }
-    
+
     .bottomleft {
         position: absolute;
         bottom: 0;
         left: 16px;
     }
-    
+
     .bottomright {
         position: absolute;
         bottom: 0;
         right: 16px;
     }
-    
+
     .middle {
         position: absolute;
         top: 50%;
@@ -44,31 +47,420 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
-    
+
+    .imgIcon {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+    }
+
     hr {
         margin: auto;
         width: 40%;
     }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    .wrapper {
+        background: linear-gradient(0deg, #7f99b2, #6e859c);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .carousel__item {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        padding: 0 12px;
+        opacity: 0;
+        filter: drop-shadow(0 5px 5px #555);
+        will-change: transform, opacity;
+        -webkit-animation: carousel-animate-vertical 54s linear infinite;
+        animation: carousel-animate-vertical 54s linear infinite;
+    }
+
+    .carousel__item:nth-child(1) {
+        -webkit-animation-delay: calc(3s * -1);
+        animation-delay: calc(3s * -1);
+    }
+
+    .carousel__item:nth-child(2) {
+        -webkit-animation-delay: calc(3s * 0);
+        animation-delay: calc(3s * 0);
+    }
+
+    .carousel__item:nth-child(3) {
+        -webkit-animation-delay: calc(3s * 1);
+        animation-delay: calc(3s * 1);
+    }
+
+    .carousel__item:nth-child(4) {
+        -webkit-animation-delay: calc(3s * 2);
+        animation-delay: calc(3s * 2);
+    }
+
+    .carousel__item:nth-child(5) {
+        -webkit-animation-delay: calc(3s * 3);
+        animation-delay: calc(3s * 3);
+    }
+
+    .carousel__item:nth-child(6) {
+        -webkit-animation-delay: calc(3s * 4);
+        animation-delay: calc(3s * 4);
+    }
+
+    .carousel__item:nth-child(7) {
+        -webkit-animation-delay: calc(3s * 5);
+        animation-delay: calc(3s * 5);
+    }
+
+    .carousel__item:nth-child(8) {
+        -webkit-animation-delay: calc(3s * 6);
+        animation-delay: calc(3s * 6);
+    }
+
+    .carousel__item:nth-child(9) {
+        -webkit-animation-delay: calc(3s * 7);
+        animation-delay: calc(3s * 7);
+    }
+
+    .carousel__item:nth-child(10) {
+        -webkit-animation-delay: calc(3s * 8);
+        animation-delay: calc(3s * 8);
+    }
+
+    .carousel__item:nth-child(11) {
+        -webkit-animation-delay: calc(3s * 9);
+        animation-delay: calc(3s * 9);
+    }
+
+    .carousel__item:nth-child(12) {
+        -webkit-animation-delay: calc(3s * 10);
+        animation-delay: calc(3s * 10);
+    }
+
+    .carousel__item:nth-child(13) {
+        -webkit-animation-delay: calc(3s * 11);
+        animation-delay: calc(3s * 11);
+    }
+
+    .carousel__item:nth-child(14) {
+        -webkit-animation-delay: calc(3s * 12);
+        animation-delay: calc(3s * 12);
+    }
+
+    .carousel__item:nth-child(15) {
+        -webkit-animation-delay: calc(3s * 13);
+        animation-delay: calc(3s * 13);
+    }
+
+    .carousel__item:nth-child(16) {
+        -webkit-animation-delay: calc(3s * 14);
+        animation-delay: calc(3s * 14);
+    }
+
+    .carousel__item:nth-child(17) {
+        -webkit-animation-delay: calc(3s * 15);
+        animation-delay: calc(3s * 15);
+    }
+
+    .carousel__item:last-child {
+        -webkit-animation-delay: calc(-3s * 2);
+        animation-delay: calc(-3s * 2);
+    }
+
+    .carousel__item-head {
+        border-radius: 50%;
+        background-color: #d7f7fc;
+        width: 90px;
+        height: 90px;
+        padding: 14px;
+        position: relative;
+        margin-right: -45px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+    }
+
+    .carousel__item-body {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 32px;
+        padding: 16px 20px 16px 70px;
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    @-webkit-keyframes carousel-animate-vertical {
+        0% {
+            transform: translateY(100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        3%,
+        5.5555555556% {
+            transform: translateY(100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+
+        8.5555555556%,
+        11.1111111111% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        14.1111111111%,
+        16.6666666667% {
+            transform: translateY(-100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+
+        19.6666666667% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    @keyframes carousel-animate-vertical {
+        0% {
+            transform: translateY(100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        3%,
+        5.5555555556% {
+            transform: translateY(100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+
+        8.5555555556%,
+        11.1111111111% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        14.1111111111%,
+        16.6666666667% {
+            transform: translateY(-100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+
+        19.6666666667% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
 </style>
 
 <body>
-
-    <div class="bgimg">
-        <div class="topleft">
-            <p style="color: white; text-decoration: none">DevHub Center</p>
-        </div>
-        <div class="middle">
-
-
-        </div>
-        <div class="bottomleft">
-            <p><a style="color: white; text-decoration: none" href="https://devhub.center/privacy.html" target="_blank" rel="noopener">Privacy</a></p>
-        </div>
-         <div class="bottomright">
-            <p><a style="color: white; text-decoration: none" href="mailto:devhub.center@gmail.com" target="_blank" rel="noopener">Contact us</a></p>
+    <div class="topleft">
+        <p style="color: white; text-decoration: none">DevHub Center</p>
+    </div>
+    <div class="wrapper">
+        <div class="carousel">
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6479676575"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/love_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Date Tall</p>
+                    <p>Reminder your memorial events</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1528984990"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/ca_dmv_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">California Driver's License Exam</p>
+                    <p>Exclusively for Vietnamese residing in The United States</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6477907083"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/va_dmv_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Virginia Driver's License Exam</p>
+                    <p>Exclusively for Vietnamese residing in The United States</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6448755890"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/nail_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Nail Technician Exam</p>
+                    <p>Exclusively for Vietnamese residing in The United States</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6449278873"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/hair_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Hair Technician Exam Review</p>
+                    <p>Exclusively for Vietnamese residing in The United States</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6449385088"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/face_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Facial Technician Exam Review</p>
+                    <p>Exclusively for Vietnamese residing in The United States</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6448627146"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/sticher_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">PDF Stitcher</p>
+                    <p>Combine multi images into one pdf</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1635329207"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/thpt_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Vietnam National High School Examination</p>
+                    <p>Studying hard leads to sweet outcomes</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1661590036"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/contact_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Contacts 4.0</p>
+                    <p>Easy to back up and restore your contacts</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6448058897"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/exrate_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">VND Exchange Rate</p>
+                    <p>VND exchange rates and gold prices</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1642064421"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/citizenship_vn_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">US Citizenship For Vietnamese</p>
+                    <p>Exclusively for Vietnamese residing in The United States</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6446226852"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/citizenship_cn_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">US Citizenship For Chinese</p>
+                    <p>Exclusively for Chinese residing in The United States</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1659312402"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/gplx_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Vietnamese Driver's License Exam Review</p>
+                    <p>Review for all ranks of driving licenses in Vietnam</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1632611739"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/gplx_120_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">120 Situations (Vietnamese Driver's License)</p>
+                    <p>Review for all ranks of driving licenses in Vietnam</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6446670869"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/viet_cal_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Vietnamese Lunar Calendar</p>
+                    <p>Traditional and Modern Calendar</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6446422065"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/lunar_cal_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Lunar Calendar And Widget</p>
+                    <p>Traditional and Modern Calendar</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1588219476"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/wallet_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Membership Wallet</p>
+                    <p>Digitalize membership cards</p>
+                </div>
+            </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1587650920"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/todo_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Minimalism To Do</p>
+                    <p>Less is more</p>
+                </div>
+            </a>
         </div>
     </div>
-
+    <div class="bottomleft">
+        <p>
+            <a style="color: white; text-decoration: none" href="https://devhub.center/privacy.html" target="_blank"
+                rel="noopener">Privacy</a>
+        </p>
+    </div>
+    <div class="bottomright">
+        <p>
+            <a style="color: white; text-decoration: none" href="mailto:devhub.center@gmail.com" target="_blank"
+                rel="noopener">Contact us</a>
+        </p>
+    </div>
 </body>
 
 </html>
