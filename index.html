@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://devhub.center">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>DevHub Center</title>
+    <meta name="keywords" content="devhub">
+    <meta name="Description" content="DevHub Center">
+    <meta property="og:title" content="DevHub Center">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devhub.center">
+    <meta property="og:description" content="DevHub Center">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="devhub.center">
+    <meta name="robots" content="index">
+    <meta name="theme-color" content="#7f99b2">
+</head>
 <style>
     body,
     html {
         height: 100%;
         margin: 0;
         font-family: "Courier New", Courier, monospace;
-        font-size: 25px;
     }
 
     .bgimg {
@@ -25,7 +41,7 @@
         top: 0;
         left: 16px;
         color: black;
-        font-size: xxx-large;
+        font-size: xx-large;
     }
 
     .bottomleft {
@@ -49,8 +65,8 @@
     }
 
     .imgIcon {
-        height: 90px;
-        width: 90px;
+        height: 100px;
+        width: 100px;
         border-radius: 25%;
     }
 
@@ -76,7 +92,7 @@
     .carousel {
         position: relative;
         width: 100%;
-        max-width: 600px;
+        max-width: 500px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -88,7 +104,7 @@
         align-items: center;
         position: absolute;
         width: 100%;
-        padding: 0 12px;
+        padding: 0 36px;
         opacity: 0;
         filter: drop-shadow(0 5px 5px #555);
         will-change: transform, opacity;
@@ -198,11 +214,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 50px;
     }
 
     .carousel__item-body {
         width: 100%;
+        min-height: 160px;
         background-color: #fff;
         border-radius: 32px;
         padding: 16px 20px 16px 70px;
@@ -210,7 +226,6 @@
 
     .title {
         text-transform: uppercase;
-        font-size: 20px;
         margin-top: 10px;
     }
 
@@ -299,7 +314,9 @@
 
 <body>
     <div class="topleft">
-        <p style="color: white; text-decoration: none">DevHub Center</p>
+        <p>
+            <a style="color: white; text-decoration: none" href="https://apps.apple.com/developer/id1586441429">DevHub Center</a>
+        </p>
     </div>
     <div class="wrapper">
         <div class="carousel">
@@ -367,14 +384,7 @@
                     <p>Studying hard leads to sweet outcomes</p>
                 </div>
             </a>
-            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1661590036"
-                target="_blank" rel="noopener">
-                <div class="carousel__item-head"><img class="imgIcon" src="images/contact_icon.png" /></div>
-                <div class="carousel__item-body">
-                    <p class="title">Contacts 4.0</p>
-                    <p>Easy to back up and restore your contacts</p>
-                </div>
-            </a>
+
             <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6448058897"
                 target="_blank" rel="noopener">
                 <div class="carousel__item-head"><img class="imgIcon" src="images/exrate_icon.png" /></div>
@@ -423,6 +433,14 @@
                     <p>Traditional and Modern Calendar</p>
                 </div>
             </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1587650920"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/todo_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">Minimalism To Do</p>
+                    <p>Less is more</p>
+                </div>
+            </a>
             <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id6446422065"
                 target="_blank" rel="noopener">
                 <div class="carousel__item-head"><img class="imgIcon" src="images/lunar_cal_icon.png" /></div>
@@ -439,12 +457,12 @@
                     <p>Digitalize membership cards</p>
                 </div>
             </a>
-            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1587650920"
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/app/id1661590036"
                 target="_blank" rel="noopener">
-                <div class="carousel__item-head"><img class="imgIcon" src="images/todo_icon.png" /></div>
+                <div class="carousel__item-head"><img class="imgIcon" src="images/contact_icon.png" /></div>
                 <div class="carousel__item-body">
-                    <p class="title">Minimalism To Do</p>
-                    <p>Less is more</p>
+                    <p class="title">Contacts 4.0</p>
+                    <p>Easy to back up and restore your contacts</p>
                 </div>
             </a>
         </div>
