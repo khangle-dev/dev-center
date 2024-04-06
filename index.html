@@ -68,6 +68,7 @@
         height: 100px;
         width: 100px;
         border-radius: 25%;
+        filter: drop-shadow(0 2px 3px #555);
     }
 
     hr {
@@ -106,7 +107,6 @@
         width: 100%;
         padding: 0 36px;
         opacity: 0;
-        filter: drop-shadow(0 5px 5px #555);
         will-change: transform, opacity;
         -webkit-animation: carousel-animate-vertical 54s linear infinite;
         animation: carousel-animate-vertical 54s linear infinite;
@@ -222,11 +222,14 @@
         background-color: #fff;
         border-radius: 32px;
         padding: 16px 20px 16px 70px;
+        color: #636366;
     }
 
     .title {
         text-transform: uppercase;
         margin-top: 10px;
+        color:#3c3c3c;
+        font-weight: 600;
     }
 
     @-webkit-keyframes carousel-animate-vertical {
@@ -365,14 +368,6 @@
             </a>
             <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/developer/id1586441429"
                 target="_blank" rel="noopener">
-                <div class="carousel__item-head"><img class="imgIcon" src="images/sticher_icon.png" /></div>
-                <div class="carousel__item-body">
-                    <p class="title">PDF Stitcher</p>
-                    <p>Combine multi images into one pdf</p>
-                </div>
-            </a>
-            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/developer/id1586441429"
-                target="_blank" rel="noopener">
                 <div class="carousel__item-head"><img class="imgIcon" src="images/thpt_icon.png" /></div>
                 <div class="carousel__item-body">
                     <p class="title">Vietnam National High School Examination</p>
@@ -460,19 +455,32 @@
                     <p>Easy to back up and restore your contacts</p>
                 </div>
             </a>
+            <a class="carousel__item" style="text-decoration: none" href="https://apps.apple.com/developer/id1586441429"
+                target="_blank" rel="noopener">
+                <div class="carousel__item-head"><img class="imgIcon" src="images/sticher_icon.png" /></div>
+                <div class="carousel__item-body">
+                    <p class="title">PDF Stitcher</p>
+                    <p>Combine multi images into one PDF file</p>
+                </div>
+            </a>
         </div>
     </div>
-    <a class="topleft" style="color: white; text-decoration: none" href="https://apps.apple.com/developer/id1586441429"><p>DevHub Center</p></a>
+    <a class="topleft" style="color: white; text-decoration: none;" href="https://apps.apple.com/developer/id1586441429">
+        <p style="margin-block-end: 5px;text-align: right;">{devhub}</p>
+        <div style="font-size: large;text-align: right;line-height: 0px; margin: 0px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;center
+        </div>
+    </a>
     <div class="bottomleft">
         <p>
             <a style="color: white; text-decoration: none" href="https://devhub.center/privacy.html" target="_blank"
-                rel="noopener">Privacy</a>
+                rel="noopener">privacy</a>
         </p>
     </div>
     <div class="bottomright">
         <p>
             <a style="color: white; text-decoration: none" href="mailto:devhub.center@gmail.com" target="_blank"
-                rel="noopener">Contact us</a>
+                rel="noopener">contact us</a>
         </p>
     </div>
 </body>
